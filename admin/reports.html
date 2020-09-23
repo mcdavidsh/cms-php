@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Complaint Management System">
+    <meta name="author" content="IMS">
+    <meta name="keywords" content="Complaint Management System">
+
+    <!-- Title Page-->
+    <title>Cpanel - IMS</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="../assets/panel/css/font-face.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/font-awesome-5.1/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="../assets/panel/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="../assets/panel/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"
+          media="all">
+    <link href="../assets/panel/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/toastr/css/toastr.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/toastr/css/toastr.min.css" rel="stylesheet" media="all">
+    <link href="../assets/panel/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="../assets/mobirise/css/mbr-custom.css" rel="stylesheet" media="all">
+
+
+    <!-- Main CSS-->
+    <link href="../assets/panel/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+<div class="page-wrapper">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop3 d-none d-lg-block p">
+        <div class="section__content section__content--p35">
+            <div class="header3-wrap">
+                <div class="header__logo" style="font-size: 36px; color: #ffffff">
+                    <a href="#" class="text-white">
+                        IMS
+                    </a>
+                </div>
+                <div class="header__navbar">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.php">
+                                <i class="fas fa-home"></i>Home
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="new.php">
+                                <i class="fas fa-plus"></i>
+                                <span class="bot-line"></span>New</a>
+                        </li>
+
+                        <li class="">
+                            <a href="status.php">
+                                <i class="fas fa-heartbeat"></i>
+                                <span class="bot-line"></span>Status</a>
+                        </li>
+                        <li>
+                            <a href="reports.html">
+                                <i class="fas fa-info"></i>
+                                <span class="bot-line"></span>Report</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-power-off"></i>
+                                <span class="bot-line"></span>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__tool">
+                    <div class="header-button-item js-item-menu">
+                        <i class="zmdi zmdi-settings"><a href="settings"></a></i>
+                    </div>
+                    <div class="account-wrap">
+                        <div class="account-item account-item--style2 clearfix js-item-menu">
+                            <div class="image">
+                                <img src="../assets/panel/images/icon/u-avatar.png" alt="user"/>
+                            </div>
+                            <div class="content">
+                                <a class="js-acc-btn" href="#">User</a>
+                            </div>
+                            <div class="account-dropdown js-dropdown">
+                                <div class="info clearfix">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="../assets/panel/images/icon/u-avatar.png" alt="user"/>
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="name">
+                                            <a href="#">User</a>
+                                        </h5>
+                                        <span class="email">user@example.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END HEADER DESKTOP-->
+
+    <!-- HEADER MOBILE-->
+    <header class="header-mobile header-mobile-2 d-block d-lg-none">
+        <div class="header-mobile__bar">
+            <div class="container-fluid">
+                <div class="header-mobile-inner" style="font-size: 36px; color: #ffffff;">
+                    <a class="logo text-white" href="index.php">
+                        IMS
+                    </a>
+                    <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar-mobile">
+            <div class="container-fluid">
+                <ul class="navbar-mobile__list list-unstyled">
+                    <li class="">
+                        <a href="index.php">
+                            <i class="fas fa-home"></i>Home
+                            <span class="bot-line"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new.php">
+                            <i class="fas fa-plus"></i>
+                            <span class="bot-line"></span>New</a>
+                    </li>
+                    <li>
+                        <a href="status.php">
+                            <i class="fas fa-heartbeat"></i>
+                            <span class="bot-line"></span>Status</a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fas fa-info"></i>
+                            <span class="bot-line"></span>Report</a>
+                    </li>
+                    <li>
+                        <a href="logout">
+                            <i class="fas fa-power-off"></i>
+                            <span class="bot-line"></span>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sub-header-mobile-2 d-block d-lg-none">
+        <div class="header__tool">
+            <div class="header-button-item js-item-menu">
+                <i class="zmdi zmdi-settings"><a href="settings.php"></a> </i>
+            </div>
+            <div class="account-wrap">
+                <div class="account-item account-item--style2 clearfix js-item-menu">
+                    <div class="image">
+                        <img src="../assets/panel/images/icon/u-avatar.png" alt="user"/>
+                    </div>
+                    <div class="content">
+                        <a class="js-acc-btn" href="#">User</a>
+                    </div>
+                    <div class="account-dropdown js-dropdown">
+                        <div class="info clearfix">
+                            <div class="image">
+                                <a href="#">
+                                    <img src="../assets/panel/images/icon/u-avatar.png" alt="user"/>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h5 class="name">
+                                    <a href="#">User</a>
+                                </h5>
+                                <span class="email">user@example.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER MOBILE -->
+
+    <!-- PAGE CONTENT-->
+    <div class="page-content--bgf7">
+        <!-- BREADCRUMB-->
+<!--        <section class="au-breadcrumb2">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="au-breadcrumb-content">-->
+<!--                            <div class="au-breadcrumb-left">-->
+<!--                                <span class="au-breadcrumb-span">You are here:</span>-->
+<!--                                <ul class="list-unstyled list-inline au-breadcrumb__list">-->
+<!--                                    <li class="list-inline-item active">-->
+<!--                                        <a href="#">Home</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item seprate">-->
+<!--                                        <span>/</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">Dashboard</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <form class="au-form-icon&#45;&#45;sm" action="" method="post">-->
+<!--                                <input class="au-input&#45;&#45;w300 au-input&#45;&#45;style2" type="text"-->
+<!--                                       placeholder="Search for datas &amp; reports...">-->
+<!--                                <button class="au-btn&#45;&#45;submit2" type="submit">-->
+<!--                                    <i class="zmdi zmdi-search"></i>-->
+<!--                                </button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <!-- END BREADCRUMB-->
+
+        <!-- WELCOME-->
+<!--        <section class="welcome p-t-10">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <h1 class="title-4">Welcome back-->
+<!--                            <span>John!</span>-->
+<!--                        </h1>-->
+<!--                        <hr class="line-seprate">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <!-- END WELCOME-->
+
+        <!-- STATISTIC-->
+        <section class="statistic">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+
+
+                        </div>
+                        <a href="#" class="col-md-4 col-lg-3 mbr-add-item">
+                            <div class="statistic__item">
+                                <h3 class="desc py-2">New Complain</h3>
+                                <i class="fa fa-plus fa-3x mbr-icon"></i>
+                            </div>
+                        </a>
+                        <div class="col-md-4 col-lg-3" style="text-align: center;">
+                            <div class="statistic__item">
+                                <h3 class="desc py-2">My Complains</h3>
+                                <span class="fa-3x mbr-icon">5</span>
+                            </div>
+                            </div>
+                        <div class="col-md-6 col-lg-3">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END STATISTIC-->
+
+
+        <!-- STATISTIC CHART-->
+<!--        <section class="statistic-chart">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <h3 class="title-5 m-b-35">statistics</h3>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6 col-lg-4">-->
+<!--                        &lt;!&ndash; CHART&ndash;&gt;-->
+<!--                        <div class="statistic-chart-1">-->
+<!--                            <h3 class="title-3 m-b-30">chart</h3>-->
+<!--                            <div class="chart-wrap">-->
+<!--                                <canvas id="widgetChart5"></canvas>-->
+<!--                            </div>-->
+<!--                            <div class="statistic-chart-1-note">-->
+<!--                                <span class="big">10,368</span>-->
+<!--                                <span>/ 16220 items sold</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; END CHART&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 col-lg-4">-->
+<!--                        &lt;!&ndash; TOP CAMPAIGN&ndash;&gt;-->
+<!--                        <div class="top-campaign">-->
+<!--                            <h3 class="title-3 m-b-30">top campaigns</h3>-->
+<!--                            <div class="table-responsive">-->
+<!--                                <table class="table table-top-campaign">-->
+<!--                                    <tbody>-->
+<!--                                    <tr>-->
+<!--                                        <td>1. Australia</td>-->
+<!--                                        <td>$70,261.65</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td>2. United Kingdom</td>-->
+<!--                                        <td>$46,399.22</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td>3. Turkey</td>-->
+<!--                                        <td>$35,364.90</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td>4. Germany</td>-->
+<!--                                        <td>$20,366.96</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td>5. France</td>-->
+<!--                                        <td>$10,366.96</td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; END TOP CAMPAIGN&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 col-lg-4">-->
+<!--                        &lt;!&ndash; CHART PERCENT&ndash;&gt;-->
+<!--                        <div class="chart-percent-2">-->
+<!--                            <h3 class="title-3 m-b-30">chart by %</h3>-->
+<!--                            <div class="chart-wrap">-->
+<!--                                <canvas id="percent-chart2"></canvas>-->
+<!--                                <div id="chartjs-tooltip">-->
+<!--                                    <table></table>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="chart-info">-->
+<!--                                <div class="chart-note">-->
+<!--                                    <span class="dot dot&#45;&#45;blue"></span>-->
+<!--                                    <span>products</span>-->
+<!--                                </div>-->
+<!--                                <div class="chart-note">-->
+<!--                                    <span class="dot dot&#45;&#45;red"></span>-->
+<!--                                    <span>Services</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; END CHART PERCENT&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <!-- END STATISTIC CHART-->
+
+        <!-- DATA TABLE-->
+        <section class="p-t-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-5 m-b-35">Complain List</h3>
+<!--                        <div class="table-data__tool">-->
+<!--                            <div class="table-data__tool-left">-->
+<!--                                <div class="rs-select2&#45;&#45;light rs-select2&#45;&#45;md">-->
+<!--                                    <select class="js-select2" name="property">-->
+<!--                                        <option selected="selected">All Properties</option>-->
+<!--                                        <option value="">Option 1</option>-->
+<!--                                        <option value="">Option 2</option>-->
+<!--                                    </select>-->
+<!--                                    <div class="dropDownSelect2"></div>-->
+<!--                                </div>-->
+<!--                                <div class="rs-select2&#45;&#45;light rs-select2&#45;&#45;sm">-->
+<!--                                    <select class="js-select2" name="time">-->
+<!--                                        <option selected="selected">Today</option>-->
+<!--                                        <option value="">3 Days</option>-->
+<!--                                        <option value="">1 Week</option>-->
+<!--                                    </select>-->
+<!--                                    <div class="dropDownSelect2"></div>-->
+<!--                                </div>-->
+<!--                                <button class="au-btn-filter">-->
+<!--                                    <i class="zmdi zmdi-filter-list"></i>filters-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                            <div class="table-data__tool-right">-->
+<!--                                <button class="au-btn au-btn-icon au-btn&#45;&#45;green au-btn&#45;&#45;small">-->
+<!--                                    <i class="zmdi zmdi-plus"></i>add item-->
+<!--                                </button>-->
+<!--                                <div class="rs-select2&#45;&#45;dark rs-select2&#45;&#45;sm rs-select2&#45;&#45;dark2">-->
+<!--                                    <select class="js-select2" name="type">-->
+<!--                                        <option selected="selected">Export</option>-->
+<!--                                        <option value="">Option 1</option>-->
+<!--                                        <option value="">Option 2</option>-->
+<!--                                    </select>-->
+<!--                                    <div class="dropDownSelect2"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="table table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </th>
+                                    <th>S/N</th>
+                                    <th>Title</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>Lori Lynch</td>
+                                    <td>
+                                        <span class="block-email">lori@example.com</span>
+                                    </td>
+                                    <td class="desc">Samsung S8 Black</td>
+                                    <td>2018-09-27 02:12</td>
+                                    <td>
+                                        <span class="status--process">Processed</span>
+                                    </td>
+                                    <td>$679.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="spacer"></tr>
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>Lori Lynch</td>
+                                    <td>
+                                        <span class="block-email">john@example.com</span>
+                                    </td>
+                                    <td class="desc">iPhone X 64Gb Grey</td>
+                                    <td>2018-09-29 05:57</td>
+                                    <td>
+                                        <span class="status--process">Processed</span>
+                                    </td>
+                                    <td>$999.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="spacer"></tr>
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>Lori Lynch</td>
+                                    <td>
+                                        <span class="block-email">lyn@example.com</span>
+                                    </td>
+                                    <td class="desc">iPhone X 256Gb Black</td>
+                                    <td>2018-09-25 19:03</td>
+                                    <td>
+                                        <span class="status--denied">Denied</span>
+                                    </td>
+                                    <td>$1199.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="spacer"></tr>
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>Lori Lynch</td>
+                                    <td>
+                                        <span class="block-email">doe@example.com</span>
+                                    </td>
+                                    <td class="desc">Camera C430W 4k</td>
+                                    <td>2018-09-24 19:10</td>
+                                    <td>
+                                        <span class="status--process">Processed</span>
+                                    </td>
+                                    <td>$699.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Send">
+                                                <i class="zmdi zmdi-mail-send"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="More">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END DATA TABLE-->
+
+        <!-- COPYRIGHT-->
+        <section class="p-t-60 p-b-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>Copyright © 2020 IMS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END COPYRIGHT-->
+    </div>
+
+</div>
+<div class="toast">
+    <div class="toast-header">
+        Toast Header
+    </div>
+    <div class="toast-body">
+        Some text inside the toast body
+    </div>
+</div>
+
+<!--Welcome Notification-->
+<script>
+
+    // $(function () {
+    //     // Toastr options
+    //     toastr.options = {
+    //         "closeButton": true,
+    //         "debug": false,
+    //         "newestOnTop": false,
+    //         "progressBar": false,
+    //         "positionClass": "toast-top-right",
+    //         "preventDuplicates": false,
+    //         "onclick": null,
+    //         "showDuration": "3000",
+    //         "hideDuration": "10000",
+    //         "timeOut": "200000",
+    //         "extendedTimeOut": "100000",
+    //         "showEasing": "swing",
+    //         "hideEasing": "linear",
+    //         "showMethod": "fadeIn",
+    //         "hideMethod": "fadeOut"
+    //     }
+    //     toastr.success("foo");
+    //
+    // });
+</script>
+<!-- Jquery JS-->
+<script src="../assets/panel/vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src=../assets/panel/"vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="../assets/panel/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="../assets/panel/vendor/slick/slick.min.js">
+</script>
+<script src="../assets/panel/vendor/toastr/js/toastr.min.js"></script>
+<script src="../assets/panel/vendor/wow/wow.min.js"></script>
+<script src="../assets/panel/vendor/animsition/animsition.min.js"></script>
+<script src="../assets/panel/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="../assets/panel/vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="../assets/panel/vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="../assets/panel/vendor/circle-progress/circle-progress.min.js"></script>
+<script src="../assets/panel/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="../assets/panel/vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="../assets/panel/vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="../assets/panel/js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

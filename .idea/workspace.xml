@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="136a3b21-e5c7-4188-89d7-a7963bc4fa26" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="PRINT_LINE_NUMBERS" value="true" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../issue\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="09f14dcc-5070-4279-ae0f-2997ecbbd2be" name="localhost" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1hW0uWBoR6Bzy3DOUYl87dZsh2K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\active\issue\assets\panel\vendor\datatable\css" />
+      <recent name="C:\xampp\htdocs\projects\active\issue" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\includes\panel" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\active\issue\admin" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
+      <recent name="C:\xampp\htdocs\projects\active\issue" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\includes\admin" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\cpanel" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost" start_url="/projects/active/issue">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="136a3b21-e5c7-4188-89d7-a7963bc4fa26" name="Default Changelist" comment="" />
+      <created>1600111765580</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600111765580</updated>
+      <workItem from="1600111767533" duration="14716000" />
+      <workItem from="1600127304563" duration="592000" />
+      <workItem from="1600181496572" duration="512000" />
+      <workItem from="1600182022131" duration="532000" />
+      <workItem from="1600182765094" duration="11359000" />
+      <workItem from="1600212891513" duration="11014000" />
+      <workItem from="1600298938860" duration="604000" />
+      <workItem from="1600305575118" duration="1029000" />
+      <workItem from="1600306722589" duration="53000" />
+      <workItem from="1600306994405" duration="9147000" />
+      <workItem from="1600395877584" duration="3645000" />
+      <workItem from="1600444201580" duration="43618000" />
+      <workItem from="1600683704669" duration="40229000" />
+      <workItem from="1600785619380" duration="23096000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="359" y="0" key="#PHP" timestamp="1600307575566">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="359" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1600307575566" />
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600307589629">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600307589629" />
+    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600814219514">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600814219514" />
+    <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600739207627">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1600739207627" />
+    <state x="474" y="259" key="NewPhpFileDialog" timestamp="1600798439466">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="474" y="259" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600798439466" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1600308510501">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600308510501" />
+    <state x="347" y="28" width="585" height="624" key="find.popup" timestamp="1600722723965">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="347" y="28" width="585" height="624" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600722723965" />
+    <state x="296" y="150" key="run.anything.popup" timestamp="1600801521247">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1600801521247" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600792564085">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600792564085" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/cpanel/new.php</url>
+          <line>93</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
