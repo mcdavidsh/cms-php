@@ -1,7 +1,6 @@
 <?php
 require_once '../config/config.php';
 require_once '../config/constant.php';
-
 session_start();
 error_reporting(E_ALL);
 if(strlen($_SESSION['login'])==0)
@@ -15,21 +14,25 @@ else{
         $uid=$_SESSION['id'];
         $category=$_POST['category'];
         $noc=$_POST['noc'];
+        $nameorg=$_POST['nameorg'];
+        $addorg=$_POST['addorg'];
+        $dateoc=$_POST['dateoc'];
+        $priority=$_POST['priority'];
         $complaintdetials=$_POST['complaindetails'];
         $compfile=$_FILES["compfile"]["name"];
 
 
 
         move_uploaded_file($_FILES["compfile"]["tmp_name"],"../_uploads/".$_FILES["compfile"]["name"]);
-        $query=mysqli_query($con,"insert into tblcomplaints(userId,category,noc,complaintDetails,complaintFile) values('$uid','$category','$noc','$complaintdetials','$compfile')");
+        $query=mysqli_query($con,"insert into tblcomplaints(userId,category,noc,complaintDetails,nameorg,addorg,dateoc,priority,complaintFile) values('$uid','$category','$noc','$complaintdetials','$nameorg','$addorg','$dateoc','$priority','$compfile')");
 // code for show complaint number
-        $sql=mysqli_query($con,"select complaintNumber from tblcomplaints  order by complaintNumber desc limit 1");
+        $sql=mysqli_query($con,"select complaintNumber from tblcomplaints  order by complaintNumber desc limit 1 ");
         while($row=mysqli_fetch_array($sql))
         {
             $cmpn=$row['complaintNumber'];
         }
         $complainno=$cmpn;
-        echo '<script> alert("Your complain has been successfully filled on queue with number  "+"'.$complainno.'")</script>';
+        echo '<script> alert("Your complain has been successfully with number")</script>';
     }
 ?>
 <!DOCTYPE html>
@@ -60,8 +63,8 @@ else{
 
 </head>
 
-<body class="animsition">
-<!--<body>-->
+<!--<body class="animsition">-->
+<body>
 <div class="page-wrapper">
     <?php include "../includes/panel/navmenu.php";?>
 
@@ -74,7 +77,7 @@ else{
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="title-4">New
-                            <span>Complain</span>
+                            <span>Complaint</span>
                         </h1>
                         <hr class="line-seprate">
                     </div>
@@ -86,11 +89,9 @@ else{
 
 <!-- Complain Form-->
 
-        <div class="col-md-6 col-lg-6 offset-md-3">
+        <div class="col-md-10 col-lg-10 offset-md-1">
             <div class="card">
-                <div class="card-header">
 
-                </div>
                 <?php if(isset($successmsg))
                 {?>
 
@@ -115,22 +116,79 @@ else{
                 <div class="card-body card-block">
 
                     <form class="form-horizontal style-form" method="post" name="complaint" enctype="multipart/form-data">
+                        <div class="card-title">
+
 
                         <div class="row form-group">
-                            <div class="col-8">
+                            <div class="col-md-8">
                                 <div class="form-group">
-                                    <label for="Title" class=" form-control-label">Tile</label>
-                                    <input type="text" name="noc" placeholder="Enter your Title" class="form-control">
+                                    <label for="Title" class=" form-control-label">Title</label>
+                                    <input type="text" required name="noc" placeholder="Enter Title" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-8">
+                        </div>
+                        </div>
+                        <div class="row form-group">
+
+
+                            <?php
+                            $query = mysqli_query($con, "SELECT * from users WHERE  userEmail='".$_SESSION['login']."'");
+
+                            while ($row = mysqli_fetch_array($query))
+
+                            {
+                            ?>
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="postal-code" class=" form-control-label">Category</label>
-                                    <select name="category" id="category" class="form-control" onChange="getCat(this.value);" required="">
-                                        <option value="">Select Category</option>
+                                    <label for="Title" class=" form-control-label">Fullname</label>
+                                    <input type="text" readonly disabled name="fname" placeholder="<?php echo $row['fullName']; ?>" class="form-control">
+                                </div>
+                            </div>
+                                <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Address</label>
+                                    <input type="text" readonly disabled name="address" placeholder="<?php echo $row['address']; ?>" class="form-control">
+                                </div>
+                                </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Phone No.</label>
+                                    <input type="text" readonly disabled name="phone" placeholder="<?php echo $row['contactNo']; ?>" class="form-control">
+                                </div>
+                            </div>
+                            <?php }?>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Name of Organization</label>
+                                    <input type="text" required name="nameorg" placeholder="Enter Organization Name" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Address of Organization</label>
+                                    <input type="text" required name="addorg" placeholder="<?php echo $row['fullName']; ?>" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Date of Occurence</label>
+                                    <input type="date" required name="dateoc"  id="dateoc" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Department</label>
+                                    <select name="category" required id="category" class="form-control" onChange="getCat(this.value);" required="">
+                                        <option value="">Select Department</option>
                                         <?php $sql=mysqli_query($con,"select id,categoryName from category ");
                                         while ($rw=mysqli_fetch_array($sql)) {
-                                        ?>
+                                            ?>
                                             <option value="<?php echo htmlentities($rw['id']);?>"><?php echo htmlentities($rw['categoryName']);?></option>
                                             <?php
                                         }
@@ -138,12 +196,29 @@ else{
                                     </select>
                                 </div>
                             </div>
-
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="Title" class=" form-control-label">Priority</label>
+                                    <select name="priority" required id="priority" class="form-control" required="">
+                                        <option value="">Select Priority</option>
+                                        <?php $sql=mysqli_query($con,"select priorityName from  priority ");
+                                        while ($rw=mysqli_fetch_array($sql)) {
+                                            ?>
+                                            <option value="<?php echo htmlentities($rw['priorityName']);?>"><?php echo htmlentities($rw['priorityName']);?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
 
+
+                        <div class="row form-group">
+                            <div class="col-md-8">
                             <label for="description" class=" form-control-label">Description</label>
-                            <textarea name="complaindetails" required="required" rows="9" class="form-control" maxlength="2000" placeholder="Type Complaint Details (max 2000 words).." class="form-control"></textarea>
+                            <textarea name="complaindetails"  required="required" rows="9" class="form-control" maxlength="2000" placeholder="Type Complaint Details (max 2000 words).." class="form-control"></textarea>
+                        </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-8">
@@ -169,3 +244,5 @@ else{
         <script src="../assets/panel/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
         <script>
         <?php };?>
+<!--        --><?php //};?>
+

@@ -50,7 +50,7 @@ else{
                         <div class="col-md-4 col-lg-3 text-center">
                              <?php
 //                            $total_cp="Total Complaint";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints");
+                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['login']."'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                             <div class="statistic__item">
@@ -81,7 +81,7 @@ $num1 = mysqli_num_rows($rt);
             <h3 class="desc py-2">Open Complaint</h3>
             <span class="fa-3x mbr-icon"><?php echo htmlentities($num1);?></span>
         </div>
-        <?php}?>
+
     </div>
     <div class="col-md-6 col-lg-3" style="text-align: center;" >
                               <?php
@@ -109,8 +109,8 @@ $num1 = mysqli_num_rows($rt);
         <section class="p-t-20">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="title-5 m-b-35">Complain History</h3>
+                    <div class="col-lg-12">
+                        <h3 class="title-5 m-b-35">My Complaint History</h3>
 
                         <div class="table table-responsive table-responsive-data2">
                             <table id="example" class="table nowrap table-data2" style="width:100%">

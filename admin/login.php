@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
     $num=mysqli_fetch_array($ret);
     if($num>0)
     {
-        $extra="admin-home.php";//
+        $extra="index.php";//
         $_SESSION['alogin']=$_POST['username'];
         $_SESSION['id']=$num['id'];
         $host=$_SERVER['HTTP_HOST'];
@@ -53,7 +53,12 @@ if(isset($_POST['submit']))
             <div class="media-container-column col-lg-6 offset-sm" data-form-type="formoid">
 
                 <div class="form1" data-form-type="formoid" style="background: #ffffff; ">
-                    <?php echo $_SESSION['errmsg']; ?><?php echo $_SESSION['errmsg']="";?>
+                    <?php if(isset($_SESSION['errmsg'])) {
+
+                        echo $_SESSION['errmsg'];
+                        $_SESSION['errmsg'] = "";
+                    }
+                    ?>
                     <!-- Default form login -->
                     <form class="text-center border border-light p-5" method="post">
 

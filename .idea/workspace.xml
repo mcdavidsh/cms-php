@@ -47,13 +47,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/staff" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -64,11 +64,11 @@
       <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\active\issue\staff" />
+      <recent name="C:\xampp\htdocs\projects\active\issue\cpanel" />
       <recent name="C:\xampp\htdocs\projects\active\issue\admin" />
       <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
       <recent name="C:\xampp\htdocs\projects\active\issue" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\includes\admin" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\cpanel" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,7 +108,10 @@
       <workItem from="1600395877584" duration="3645000" />
       <workItem from="1600444201580" duration="43618000" />
       <workItem from="1600683704669" duration="40229000" />
-      <workItem from="1600785619380" duration="23096000" />
+      <workItem from="1600785619380" duration="23695000" />
+      <workItem from="1600827225340" duration="224000" />
+      <workItem from="1601129924241" duration="28944000" />
+      <workItem from="1601175552632" duration="50489000" />
     </task>
     <servers />
   </component>
@@ -124,44 +127,39 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600307589629" />
-    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600814219514">
+    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601269347530">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600814219514" />
+    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1601269347530" />
     <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600739207627">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1600739207627" />
-    <state x="474" y="259" key="NewPhpFileDialog" timestamp="1600798439466">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601164164196">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601164164196" />
+    <state x="474" y="259" key="NewPhpFileDialog" timestamp="1601285067677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="474" y="259" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600798439466" />
-    <state x="141" y="0" key="SettingsEditor" timestamp="1600308510501">
+    <state x="474" y="259" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1601285067677" />
+    <state x="506" y="277" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1601249117031" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1600827371878">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600308510501" />
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600827371878" />
     <state x="347" y="28" width="585" height="624" key="find.popup" timestamp="1600722723965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="28" width="585" height="624" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600722723965" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1600801521247">
+    <state x="296" y="150" key="run.anything.popup" timestamp="1601287485746">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1600801521247" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600792564085">
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1601287485746" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601289479954">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600792564085" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/cpanel/new.php</url>
-          <line>93</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601289479954" />
+    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601249630244" />
   </component>
 </project>

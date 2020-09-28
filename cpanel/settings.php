@@ -20,7 +20,7 @@ else{
         if($num>0)
         {
             $con=mysqli_query($con,"update users set password='".md5($_POST['newpassword'])."', updationDate='$currentTime' where userEmail='".$_SESSION['login']."'");
-            $successmsg="Password Changed Successfully</div>";
+            $successmsg="Password Changed Successfully";
         }
         else
         {

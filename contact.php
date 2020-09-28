@@ -53,9 +53,13 @@ if(isset($_POST["msgsend"])) {
 
                 <div class="form1" data-form-type="formoid">
 
-                    <?php if(isset($msgsuccess)); ?>
+                 
+                    <?php if(isset($msgsuccess)) {
 
-                    <?php echo $msgsuccess;?>
+                        echo $msgsuccess;
+                        $msgsuccess = "";
+                    }
+                    ?>
                     <!-- Default form login -->
                     <form class="text-center border border-light p-5" method="post">
 

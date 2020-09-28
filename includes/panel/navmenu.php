@@ -49,9 +49,9 @@ include "../config/constant.php";
                 </ul>
             </div>
             <div class="header__tool">
-                <?php $query=mysqli_query($con,"select fullName from users where userEmail='".$_SESSION['login']."'");
-                while($row=mysqli_fetch_array($query))
-                {
+                  <?php $query=mysqli_query($con,"select fullName from users where userEmail='".$_SESSION['login']."'");
+                    while($row=mysqli_fetch_array($query))
+                    {
                 ?>
                 <div class="header-button-item js-item-menu">
                     <h4 style="font-weight: 500;"><?php echo ucwords($row['fullName']);?></h4>

@@ -5,7 +5,7 @@ require_once '../config/constant.php';
 session_start();
 error_reporting(E_ALL);
 
-if(strlen($_SESSION['alogin'])==0)
+if(strlen($_SESSION['slogin'])==0)
 {
     header('location:login.php');
 }
@@ -14,10 +14,10 @@ else{
     $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 if(isset($_POST['submit'])) {
-    $sql = mysqli_query($con, "SELECT password FROM  admin where password='" . md5($_POST['password']) . "' && username='" . $_SESSION['alogin'] . "'");
+    $sql = mysqli_query($con, "SELECT password FROM  staff where password='" . md5($_POST['password']) . "' && username='" . $_SESSION['slogin'] . "'");
     $num = mysqli_fetch_array($sql);
     if ($num > 0) {
-        $con = mysqli_query($con, "update admin set password='" . md5($_POST['newpassword']) . "', updationDate='$currentTime' where username='" . $_SESSION['alogin'] . "'");
+        $con = mysqli_query($con, "update staff set password='" . md5($_POST['newpassword']) . "', updationDate='$currentTime' where username='" . $_SESSION['slogin'] . "'");
         $_SESSION['msg'] = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Password Changed Successfully</div>';
     } else {
         $_SESSION['msg'] = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Old Password not match</div>';
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
 
 <body class="animsition">
 <div class="page-wrapper">
-    <?php include "../includes/admin/navmenu.php";?>
+    <?php include "../includes/staff/navmenu.php";?>
 
 
     <!-- PAGE CONTENT-->

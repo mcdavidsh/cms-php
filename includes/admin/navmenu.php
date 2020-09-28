@@ -25,36 +25,55 @@ include "../config/constant.php";
                     <li class="has-sub">
                         <a href="#" class="text-dark">
                             <i class="fas fa-tasks"></i>
-                            <span class="bot-line"></span>Manage Complain</a>
+                            <span class="bot-line"></span>Complaints</a>
                         <ul class="header3-sub-list list-unstyled">
                             <li>
                                 <?php
-//                                $status="Not Processed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status is null");
+                                $status="Not Processed";
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astaff='".$_SESSION['alogin']."' and  status is null");
+
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
-                                <a href="<?php echo $nt_proc; ?>">Not Processed <span class="badge badge-info "><?php echo htmlentities($num1) ;?></span></a>
-                                <?php }?>
+                                    <a href="<?php echo $nt_proc; ?>">Not Processed <span class="badge badge-info "><?php
+                                                echo $num1 ;}?></span></a>
+
                             </li>
+
                             <li>
                                 <?php
                                 $status="In Process";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where  astaff='".$_SESSION['alogin']."' and  status='$status'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
-                                <a href="<?php echo $proc; ?>">In Process <span class="badge badge-warning"><?php echo htmlentities($num1) ;?></span></a>
-                                <?php }?>
+                                <a href="<?php echo $proc; ?>">In Process <span class="badge badge-warning"><?php echo $num1 ;}?></span></a>
+
                             </li>
                             <li>
                                 <?php
                                 $status="closed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astaff='".$_SESSION['alogin']."' and  status='$status'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
                                 <a href="<?php echo $clos; ?>">Closed <span class="badge badge-success "><?php echo htmlentities($num1) ;?></span></a>
                                 <?php }?>
                             </li>
+                              <li>
+                                <?php
+                                $status="Assigned";
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astaff='".$_SESSION['alogin']."' and  astatus='$status'");
+                                $num1 = mysqli_num_rows($rt);
+                                {?>
+                                <a href="<?php echo 'assigned-complaint.php'; ?>">Assigned <span class="badge badge-primary "><?php echo htmlentities($num1) ;?></span></a>
+                                <?php }?>
+                            </li>
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo "reports.php" ?>" class="text-dark">
+                            <i class="fas fa-chart-bar"></i>Report
+                            <span class="bot-line"></span>
+                        </a>
                     </li>
                     <li>
                         <a href="<?php echo "mail.php" ?>" class="text-dark">
@@ -81,11 +100,7 @@ include "../config/constant.php";
                             </li>
                         </ul>
                     </li>
-                    <!--                        <li>-->
-                    <!--                            <a href="reports.html">-->
-                    <!--                                <i class="fas fa-info"></i>-->
-                    <!--                                <span class="bot-line"></span>Report</a>-->
-                    <!--                        </li>-->
+                
                     <li >
                         <a href="<?php echo $admin_logout; ?>" class="text-dark">
                             <i class="fas fa-power-off"></i>
@@ -108,9 +123,9 @@ include "../config/constant.php";
                           <!--user Avatar-->
                             <?php echo $user_avatar;?>
                         </div>
-                        <div class="content">
-                            <a class="js-acc-btn" href="#">User</a>
-                        </div>
+<!--                        <div class="content">-->
+<!--                            <a class="js-acc-btn" href="#">User</a>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -175,8 +190,24 @@ include "../config/constant.php";
                                 <a href="<?php echo $clos; ?>">Closed <span class="badge badge-success "><?php echo htmlentities($num1) ;?></span></a>
                             <?php }?>
                         </li>
+                         <li>
+                                <?php
+                                  $status="Assigned";
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astatus='$status'");
+                                $num1 = mysqli_num_rows($rt);
+                                {?>
+                                <a href="assigned-complaint.php">Assigned <span class="badge badge-primary ">
+                                    <?php echo $num1 ;?></span></a>
+                                <?php }?>
+                            </li>
                     </ul>
                 </li>
+                 <li>
+                        <a href="<?php echo "reports.php" ?>" class="text-dark">
+                            <i class="fas fa-chart-bar"></i>Report
+                            <span class="bot-line"></span>
+                        </a>
+                    </li>
                 <li >
                     <a href="<?php echo $mng_users; ?>" class="text-dark">
                         <i class="fas fa-users"></i>

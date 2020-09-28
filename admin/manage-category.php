@@ -17,14 +17,14 @@ if(isset($_POST['submit']))
     $category=$_POST['category'];
     $description=$_POST['description'];
     $sql=mysqli_query($con,"insert into category(categoryName,categoryDescription) values('$category','$description')");
-    $_SESSION['msg']= '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Category created</div>';
+    $_SESSION['msg']= '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Department created</div>';
 
 }
 
 if(isset($_GET['del']))
 {
     mysqli_query($con,"delete from category where id = '".$_GET['id']."'");
-    $_SESSION['delmsg']='<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Category deleted</div>';
+    $_SESSION['delmsg']='<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Department deleted</div>';
 }
 
 
@@ -138,7 +138,7 @@ Create Category
 
                                         <td>
                                             <a href="edit-category.php?id=<?php echo $row['id']?>" ><i class="fas fa-edit"></i></a>
-                                            <a href="category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="fas fa-times-circle"></i></a></td>
+                                            <a href="manage-category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="fas fa-times-circle"></i></a></td>
                                     </tr>
 
                                     <?php $cnt=$cnt+1; } ?>

@@ -58,7 +58,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                             <div class="col-md-6 col-lg-3 offset-1 text-center">
                                 <?php
                                 $status="Closed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astaff='".$_SESSION['alogin']."' and  status='$status'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
                                     <div class="statistic__item">
@@ -108,8 +108,9 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                 $st='closed';
                                 $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.status='$st'");
                                 while($row=mysqli_fetch_array($query))
-                                {
-                                    ?>
+                                {?>
+                                   <?php if($row['astatus']=="Assigned" ){
+                                }else{ ?>
                                     <tr class="tr-shadow">
                                         <td><?php echo htmlentities($row['complaintNumber']);?></td>
                                         <td><?php echo htmlentities($row['name']);?></td>
@@ -122,6 +123,8 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                         </td>
                                     </tr>
 
+
+                                <?php  } ?>
                                 <?php  } ?>
                                 <!--                                    <tr class="spacer"></tr>-->
 

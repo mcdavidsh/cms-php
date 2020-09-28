@@ -43,6 +43,7 @@ require "../config/constant.php";
 <script src="../assets/panel/vendor/DataTables/js/dataTables.jqueryui.min.js"></script>
 <script src="../assets/panel/vendor/DataTables/js/dataTables.foundation.min.js"></script>
 <script src="../assets/panel/vendor/DataTables/js/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/panel/vendor/lightbox/lightbox.js"></script>
 <!--<script src="../assets/panel/vendor/DataTables/js/dataTables.bootstrap.min.js"></script>-->
 <script>
 

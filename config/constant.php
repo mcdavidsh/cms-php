@@ -19,6 +19,12 @@ $user_login = 'login.php';
 
 $user_reg = 'register.php';
 
+//Blog Images
+
+$img_1 = 'assets/images/blog/img-1.jpg';
+$img_2 = 'assets/images/blog/img-2.jpg';
+$img_3 = 'assets/images/blog/img-3.jpg';
+
 //Cpanel Links
 $new_comp ='new.php';
 
@@ -30,12 +36,18 @@ $logout ='../logout.php';
 //Staff Links
 $staff_login = 'staff/login.php';
 
+$staff_home = 'index.php';
+$staff_logout = 'logout.php';
+$staff_login = 'staff/login.php';
+$staff_login = 'staff/login.php';
+$staff_login = 'staff/login.php';
+
 //Admin Links
 $admin_login = 'admin/login.php';
 
 $admin_logout = 'logout.php';
 
-$admin_home ='admin-home.php';
+$admin_home ='index.php';
 
 $nt_proc = 'not-processed.php';
 

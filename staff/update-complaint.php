@@ -3,18 +3,18 @@ error_reporting(E_ALL);
 require_once '../config/config.php';
 require_once '../config/constant.php';
 session_start();
-if(strlen($_SESSION['alogin'])==0)
+if(strlen($_SESSION['slogin'])==0)
 {
     header('location:login.php');
 }
 else {
-if(isset($_POST['submit']))
+if(isset($_POST['update']))
 {
     $complaintnumber=$_GET['cid'];
-    $status=$_POST['status'];
-    $remark=$_POST['remark'];
-    $query=mysqli_query($con,"insert into complaintremark(complaintNumber,status,remark) values('$complaintnumber','$status','$remark')");
-    $sql=mysqli_query($con,"update tblcomplaints set status='$status' where complaintNumber='$complaintnumber'");
+    $cstatus=$_POST['cstatus'];
+    $premark=$_POST['premark'];
+    $query=mysqli_query($con,"update ascomplaints set cstatus ='$cstatus',premark='$premark' where acomplaintNumber='$complaintnumber'");
+    $sql=mysqli_query($con,"update tblcomplaints set status='$cstatus' where complaintNumber='$complaintnumber'");
 
     echo "<script>alert('Complaint details updated successfully');</script>";
 
@@ -67,7 +67,7 @@ if(isset($_POST['submit']))
             <div class="card">
                 <div class="card-body card-block">
 
-                    <form class="form-horizontal style-form" method="post" name="updateticket" id="updatecomplaint" enctype="multipart/form-data">
+                    <form class="form-horizontal style-form" method="post" name="complaint" enctype="multipart/form-data">
                         <div class="card-title">
 
                             <div class="row form-group">
@@ -83,7 +83,7 @@ if(isset($_POST['submit']))
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Title" class=" form-control-label py-2"> Status</label>
-                                    <select class="form-control" name="status" required="required">
+                                    <select class="form-control" name="cstatus" required="required">
                                         <option value="">Select Status</option>
                                         <option value="in process">In Process</option>
                                         <option value="closed">Closed</option>
@@ -96,13 +96,13 @@ if(isset($_POST['submit']))
                         <div class="row form-group">
                             <div class="col-md-6">
                                 <label for="description" class=" form-control-label">Remarks</label>
-                                <textarea name="remark"  required rows="9" class="form-control" placeholder="Type Remarks..." class="form-control"></textarea>
+                                <textarea name="premark"  required rows="9" class="form-control" placeholder="Type Remarks..." class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="btn-group-sm btn-block">
                             <input name="Submit2" type="submit" class="btn btn-danger"
                                    value="Close this window " onClick="return f2();"/>
-                            <button type="submit" class="btn btn-success display-4" name="submit">Update</button>
+                            <button type="submit" class="btn btn-success display-4" name="update">Update</button>
 
                         </div>
 
@@ -113,7 +113,8 @@ if(isset($_POST['submit']))
         </div>
 
 
-        <!--        New Responsive Table-->
+
+
 
 
         <?php include "../includes/panel/footer.php"; ?>

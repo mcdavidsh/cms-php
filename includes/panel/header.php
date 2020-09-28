@@ -6,6 +6,7 @@
     <meta name="description" content="Complaint Management System">
     <meta name="author" content="IMS">
     <meta name="keywords" content="Complaint Management System">
+    <link rel="shortcut icon" href="<?php echo $favico;?>" type="image/xicon">
 
     <!-- Title Page-->
 

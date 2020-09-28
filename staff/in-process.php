@@ -26,7 +26,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 <body class="animsition">
 <div class="page-wrapper">
-    <?php include "../includes/admin/navmenu.php";?>
+    <?php include "../includes/staff/navmenu.php";?>
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
@@ -105,7 +105,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                 <tbody class="text-left">
                                 <?php
                                 $st='in process';
-                                $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.status='$st'");
+                                $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.astaff='".$_SESSION['id']."' and tblcomplaints.status='$st'");
                                 while($row=mysqli_fetch_array($query))
                                 {
                                     ?>
@@ -118,6 +118,8 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                         <td><span type="button" class="badge py-1 font-weight-bold badge-warning"><?php echo $status;?></span></td>
 
                                         <td>   <a class="btn btn-primary btn-sm" href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> View Details</a>
+                                        </td>
+                                        <td>   <a class="btn btn-primary btn-sm" href="reports.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> Report Case</a>
                                         </td>
                                     </tr>
 

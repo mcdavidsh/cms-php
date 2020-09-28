@@ -151,7 +151,7 @@ $num1 = mysqli_num_rows($rt);
                                             <span class="badge badge-danger" style="font-size: 14px;">Closed</span>
                                         <?php } ?>
                                     <td align="center">
-                                        <a href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>">
+                                        <a href="complaint-details-old.php?cid=<?php echo htmlentities($row['complaintNumber']);?>">
                                             <button type="button" class="btn btn-sm btn-danger rounded">View Details</button></a>
                                     </td>
 <!--                                    <tr class="spacer"></tr>-->

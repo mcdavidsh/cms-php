@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 require_once '../config/config.php';
 require_once '../config/constant.php';
-require_once '../config/PHPMailer.php';
 session_start();
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:login.php');
@@ -10,16 +9,32 @@ if (strlen($_SESSION['alogin']) == 0) {
     date_default_timezone_set('Africa/Lagos');// change according timezone
     $currentTime = date('d-m-Y h:i:s A', time());
 
+}
 
-    if (isset($_POST['submit'])) {
-        $headers = 'From:' .''. $sitename;
-        $recmail = $_POST['recmail'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
+if(isset($_POST['submit'])){
+    $to = $_POST['recmail']; // this is your Email address
+    $from = "demo@enetcode.com"; // this is the sender's Email address
+    // $first_name = $_POST['first_name'];
+    // $last_name = $_POST['last_name'];
+    $subject = $_POST['subject'];
+    $message =  $_POST['message'];
 
-        mail($recmail, $subject, $headers);
-        $msg ='<div class="alert alert-success" role="alert">Email Sent Successfully</div>';
-  }
+    $headers = "From:" . $from;
+    // $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+ 
+   $msg ='<div class="alert alert-success" role="alert">Email Sent Successfully</div>';
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+//     if (isset($_POST['submit'])) {
+//         $headers = 'From:' .''. $sitename;
+//         $recmail = $_POST['recmail'];
+//         $subject = $_POST['subject'];
+//         $message = $_POST['message'];
+
+//         mail($recmail, $subject, $headers);
+//         $msg ='<div class="alert alert-success" role="alert">Email Sent Successfully</div>';
+//   }
 
 
     ?>
@@ -167,5 +182,4 @@ if (strlen($_SESSION['alogin']) == 0) {
     <?php include "../includes/panel/footer.php"; ?>
 
 
-<?php } ?>
         <?php } ?>

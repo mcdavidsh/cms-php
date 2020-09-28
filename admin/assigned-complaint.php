@@ -3,7 +3,9 @@ error_reporting(E_ALL);
 require_once '../config/config.php';
 require_once '../config/constant.php';
 session_start();
-if(strlen($_SESSION['slogin'])==0)
+
+$_SESSION['page_one'] = time();
+if(strlen($_SESSION['alogin'])==0)
 {
     header('location:login.php');
 }
@@ -26,7 +28,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 <body class="animsition">
 <div class="page-wrapper">
-    <?php include "../includes/staff/navmenu.php";?>
+    <?php include "../includes/admin/navmenu.php";?>
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
@@ -36,7 +38,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="title-4">Not Processed
+                        <h1 class="title-4">Assigned
                             <span>Complaints</span>
                         </h1>
                         <hr class="line-seprate">
@@ -56,8 +58,8 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                             </div>
                             <div class="col-md-6 col-lg-3 offset-1 text-center">
                                 <?php
-                                $status="Not Processed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status is null");
+                                $status="Assigned";
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where  astatus='$status'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
                                     <div class="statistic__item">
@@ -68,17 +70,17 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                     </div>
                                 <?php }?>
                             </div>
-                            </div>
-                            <?php }?>
-                            <div class="col-md-4 col-lg-3" style="text-align: center;">
-
-                            </div>
-
-
+                        </div>
+                        <?php }?>
+                        <div class="col-md-4 col-lg-3" style="text-align: center;">
 
                         </div>
+
+
+
                     </div>
                 </div>
+            </div>
         </section>
 
 
@@ -87,7 +89,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="title-5 m-b-35">Not processed List</h3>
+                        <h3 class="title-5 m-b-35">Assigned List</h3>
 
                         <div class="table table-responsive table-responsive-data2">
                             <table id="example" class="table nowrap table-data2" style="width:100%">
@@ -95,7 +97,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                 <tr>
                                     <th>S/N</th>
                                     <th>Complain Title</th>
-                                    <th>Type</th>
+                                    <th>Department</th>
                                     <th>Reg Date</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -104,25 +106,25 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                 </thead>
                                 <tbody class="text-left">
                                 <?php
-                                $astatus ="Assigned";
-                                $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.astaff = '".$_SESSION['id']."' and tblcomplaints.astatus = '$astatus'");
+                                $st='Assigned';
+                                $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name, category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.astatus='$st'");
                                 while($row=mysqli_fetch_array($query))
                                 {
-                                ?>
-                                <tr class="tr-shadow">
-                                    <td><?php echo htmlentities($row['complaintNumber']);?></td>
-                                    <td><?php echo htmlentities($row['name']);?></td>
-                                    <td><?php echo htmlentities($row['category']);?></td>
-                                    <td><?php echo htmlentities($row['regDate']);?></td>
+                                    ?>
+                                    <tr class="tr-shadow">
+                                        <td><?php echo htmlentities($row['complaintNumber']);?></td>
+                                        <td><?php echo htmlentities($row['name']);?></td>
+                                        <td><?php echo htmlentities($row['catname']);?></td>
+                                        <td><?php echo htmlentities($row['regDate']);?></td>
 
-                                    <td><span type="button" class="badge py-1 font-weight-bold badge-info">Not process yet</span></td>
+                                        <td><span type="button" class="badge py-1 font-weight-bold badge-warning"><?php echo $status;?></span></td>
 
-                                    <td>   <a class="btn btn-primary btn-sm" href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> View Details</a>
-                                    </td>
-                                </tr>
-
-                                <?php  } ?>
-                                    <!--                                    <tr class="spacer"></tr>-->
+                                        <td>   <a class="btn btn-primary btn-sm" href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> View Details</a>
+                                        </td>
+                                    </tr>
+                                <?php }?>
+                             
+                                <!--                                    <tr class="spacer"></tr>-->
 
 
 

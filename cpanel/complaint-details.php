@@ -5,7 +5,7 @@ require_once '../config/constant.php';
 require_once '../config/PHPMailer.php';
 session_start();
 
-if (strlen($_SESSION['alogin']) == 0) {
+if (strlen($_SESSION['login']) == 0) {
     header('location:login.php');
 } else {
 
@@ -50,7 +50,7 @@ if(isset($_POST["submit"])) {
 <!--<body class="animsition">-->
 <body>
 <div class="page-wrapper">
-    <?php include "../includes/admin/navmenu.php"; ?>
+    <?php include "../includes/panel/navmenu.php"; ?>
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
@@ -71,103 +71,88 @@ if(isset($_POST["submit"])) {
         <!--         END WELCOME-->
         <!-- STATISTIC-->
 
-                <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-10 offset-md-1">
-                                <div class="card">
-                                    <?php $st='closed';
-                                    $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name,category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."'");
-                                    while($row=mysqli_fetch_array($query))
-                                    {
+                <div class="container">
+                    <div class="module">
+<!--                        <div class="module-head">-->
+<!--                            <h3>Complaint Details</h3>-->
+<!--                        </div>-->
+                        <div class="module-body table">
+                            <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+
+                                <tbody>
+
+                                <?php $st='closed';
+                                $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name,category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."'");
+                                while($row=mysqli_fetch_array($query))
+                                {
 
                                     ?>
-                                    <div class="card-header">
-                                        <small class="float-right"><?php echo htmlentities($row['regDate']);?></small>
-                                        <div class="card-title">Complaint Name: <?php echo htmlentities($row['name']);?></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6">
+                                    <tr>
+                                        <td><b>Complaint Number</b></td>
+                                        <td><?php echo htmlentities($row['complaintNumber']);?></td>
+                                        <td><b>Title</b></td>
+                                        <td> <?php echo htmlentities($row['noc']);?></td>
+                                        <td><b>Reg Date</b></td>
+                                        <td><?php echo htmlentities($row['regDate']);?>
+                                        </td>
+                                    </tr>
 
-                                                <div class="card-title" style="font-size: 18px; font-weight: 600;">Complaint No: <span class="card-text pl-2" style="font-weight: 500; font-size: 15px;"><?php echo htmlentities($row['complaintNumber']);?></span></div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="card-title"  style="font-size: 18px; font-weight: 600;">Category: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo ($row['catname']); ?></span></div>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3">
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">File: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php $cfile=$row['complaintFile'];
-                                                        if($cfile=="" || $cfile=="NULL")
-                                                        {
-                                                            echo "File NA";
-                                                        }
-                                                        else{?>
-                                                            <a href="../_uploads/<?php echo htmlentities($row['complaintFile']);?>" target="_blank"/> View File</a>
-                                                        <?php } ?></span></div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Final Status: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php if($row['status']=="")
-                                                        { echo "Not Process Yet";
-                                                        } else {
-                                                            echo htmlentities($row['status']);
-                                                        }?></span></div>
-                                            </div>
+                                    <tr>
+                                        <td><b>Department </b></td>
+                                        <td><?php echo ucwords($row['catname']);?></td>
+<!--                                        <td><b>SubCategory</b></td>-->
+<!--                                        <td> --><?php //echo htmlentities($row['subcategory']);?><!--</td>--
+                                    </tr>
+                                    <tr>
+<!--                                        <td><b>State </b></td>-->
+<!--                                        <td>--><?php //echo htmlentities($row['state']);?><!--</td>-->
+<!--                                        <td ><b>Nature of Complaint</b></td>-->
+<!--                                        <td colspan="3"> --><?php //echo htmlentities($row['noc']);?><!--</td>-->
 
-                                        </div>
-                                        <div class="row py-3">
-                                            <?php $ret=mysqli_query($con,"select complaintremark.remark as remark,complaintremark.status as sstatus,complaintremark.remarkDate as rdate from complaintremark join tblcomplaints on tblcomplaints.complaintNumber=complaintremark.complaintNumber where complaintremark.complaintNumber='".$_GET['cid']."'");
-                                            while($rw=mysqli_fetch_array($ret))
-                                            {?>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Remarks: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['remark']); ?>
-                                                    </span></div></div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class=" card-title"  style="font-size: 18px; font-weight: 600;">Remark Date: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['rdate']); ?>
-                                                    </span></div></div>
-                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Complaint Details </b></td>
 
-                                    </di>
-                                        <div class="row py-3">
-                                            <div class="col-md-4 col-lg-6">
-                                                <div class="card-title"  style="font-size: 18px; font-weight: 600;">Status: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['sstatus']); ?>
-                                                    </span>
-                                                </div>
+                                        <td colspan="5"> <?php echo htmlentities($row['complaintDetails']);?></td>
 
-                                            </div>
-                                            <?php }?>
-                                        </div>
-                                    <div class="row py-3">
-                                        <div class="col-md-4 col-lg-6">
-                                            <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Complain Deatils: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;">
- <?php echo htmlentities($row['complaintDetails']);?>
-                                                    </span>
-                                            </div>
+                                    </tr>
 
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="row ml-2">
-                                            <div class="card-title px-4"><h5>Action:</h5></div>
+                                    </tr>
 
-                                            <div class="btn-group-sm btn-block">
-                                                <?php if($row['status']=="closed"){
+                                    <tr>
+                                        <td><b>Final Status</b></td>
 
-                                                } else {?>                                              <a href="javascript:void(0);" onClick="popUpWindow('update-complaint.php?cid=<?php echo $row['complaintNumber'];?>');" title="Update order">
-                                                        <button type="button" class="btn btn-primary">Update</button></a><?php } ?>
+                                        <td colspan="5"><?php if($row['status']=="")
+                                            { echo "Not Process Yet";
+                                            } else {
+                                                echo htmlentities($row['status']);
+                                            }?></td>
 
-                                                    <button type="submit" name="submit" class="btn btn-primary">Forward</button>
+                                    </tr>
 
-                                            </div>
+                                    <?php $ret=mysqli_query($con,"select complaintremark.remark as remark,complaintremark.status as sstatus,complaintremark.remarkDate as rdate from complaintremark join tblcomplaints on tblcomplaints.complaintNumber=complaintremark.complaintNumber where complaintremark.complaintNumber='".$_GET['cid']."'");
+                                    while($rw=mysqli_fetch_array($ret))
+                                    {
+                                        ?>
+                                        <tr>
+                                            <td><b>Remark</b></td>
+                                            <td colspan="5"><?php echo  htmlentities($rw['remark']); ?> <b>Remark Date :</b><?php echo  htmlentities($rw['rdate']); ?></td>
+                                        </tr>
 
-                                        </div>
-                                        <?php }?>
-                                    </div>
-                                </div>
-                            </div>
+                                        <tr>
+                                            <td><b>Status</b></td>
+                                            <td colspan="5"><?php echo  htmlentities($rw['sstatus']); ?></td>
+                                        </tr>
+                                    <?php }?>
 
+
+
+
+
+
+                            </table>
                         </div>
+                    </div>
                 </div>
 
 
@@ -178,3 +163,5 @@ if(isset($_POST["submit"])) {
 
 
         <?php } ?>
+        <?php } ?>
+

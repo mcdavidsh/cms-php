@@ -11,13 +11,13 @@ include "../config/constant.php";
     <div class="section__content section__content--p35">
         <div class="header3-wrap">
             <div class="header__logo">
-                <a href="<?php echo $admin_home;  ?>" ><?php echo $logourl2; ?>
+                <a href="<?php echo $staff_home;  ?>" ><?php echo $logourl2; ?>
                 </a>
             </div>
             <div class="header__navbar">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="<?php echo $admin_home; ?>" class="text-dark">
+                        <a href="<?php echo $staff_home; ?>" class="text-dark">
                             <i class="fas fa-home"></i>Home
                             <span class="bot-line"></span>
                         </a>
@@ -29,29 +29,29 @@ include "../config/constant.php";
                         <ul class="header3-sub-list list-unstyled">
                             <li>
                                 <?php
-//                                $status="Not Processed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status is null");
+                                $cstatus= null;
+                                $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and cstatus = '$cstatus'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
-                                <a href="<?php echo $nt_proc; ?>">Not Processed <span class="badge badge-info "><?php echo htmlentities($num1) ;?></span></a>
+                                    <a href="<?php echo $nt_proc; ?>">Not Processed <span class="badge badge-info "><?php echo htmlentities($num1) ;?></span></a>
                                 <?php }?>
                             </li>
                             <li>
                                 <?php
-                                $status="In Process";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $cstatus="In Process";
+                                $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
-                                <a href="<?php echo $proc; ?>">In Process <span class="badge badge-warning"><?php echo htmlentities($num1) ;?></span></a>
+                                    <a href="<?php echo $proc; ?>">In Process <span class="badge badge-warning"><?php echo htmlentities($num1) ;?></span></a>
                                 <?php }?>
                             </li>
                             <li>
                                 <?php
-                                $status="closed";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $cstatus="Closed";
+                                $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
-                                <a href="<?php echo $clos; ?>">Closed <span class="badge badge-success "><?php echo htmlentities($num1) ;?></span></a>
+                                    <a href="<?php echo $clos; ?>">Closed <span class="badge badge-success "><?php echo htmlentities($num1) ;?></span></a>
                                 <?php }?>
                             </li>
                         </ul>
@@ -61,15 +61,6 @@ include "../config/constant.php";
                             <i class="fas fa-cogs"></i>
                             <span class="bot-line"></span>Settings</a>
                         <ul class="header3-sub-list list-unstyled">
-                            <li>
-                                <a href="<?php echo $mng_users; ?>">Manage Users</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $mng_sf; ?>">Manage Staff</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $mng_category; ?>">Manage Complain Type</a>
-                            </li>
                             <li>
                                 <a href="<?php echo $chng_pwd; ?>">Change Password</a>
                             </li>
@@ -81,7 +72,7 @@ include "../config/constant.php";
                     <!--                                <span class="bot-line"></span>Report</a>-->
                     <!--                        </li>-->
                     <li >
-                        <a href="<?php echo $admin_logout; ?>" class="text-dark">
+                        <a href="<?php echo $staff_logout; ?>" class="text-dark">
                             <i class="fas fa-power-off"></i>
                             <span class="bot-line"></span>Logout</a>
                     </li>
@@ -118,7 +109,7 @@ include "../config/constant.php";
     <div class="header-mobile__bar">
         <div class="container-fluid">
             <div class="header-mobile-inner" >
-                <a class="logo text-white "style="height: 40px; width: auto;" href="<?php echo $homepage; ?>"><?php echo $logourl2; ?>
+                <a class="logo text-white "style="height: 40px; width: auto;" href="<?php echo $staff_home; ?>"><?php echo $logourl2; ?>
                 </a>
                 <button class="hamburger hamburger--slider bg-dark" type="button">
                             <span class="hamburger-box text-dark">
@@ -132,7 +123,7 @@ include "../config/constant.php";
         <div class="container-fluid">
             <ul class="navbar-mobile__list list-unstyled">
                 <li>
-                    <a href="<?php echo $admin_home; ?>" class="text-dark">
+                    <a href="<?php echo $staff_home; ?>" class="text-dark">
                         <i class="fas fa-home"></i>Home
                         <span class="bot-line"></span>
                     </a>
@@ -144,8 +135,8 @@ include "../config/constant.php";
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
                             <?php
-                            //                                $status="Not Processed";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where status is null");
+                            $cstatus= null;
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and cstatus = '$cstatus'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                                 <a href="<?php echo $nt_proc; ?>">Not Processed <span class="badge badge-info "><?php echo htmlentities($num1) ;?></span></a>
@@ -153,8 +144,8 @@ include "../config/constant.php";
                         </li>
                         <li>
                             <?php
-                            $status="In Process";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                            $cstatus="In Process";
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                                 <a href="<?php echo $proc; ?>">In Process <span class="badge badge-warning"><?php echo htmlentities($num1) ;?></span></a>
@@ -162,8 +153,8 @@ include "../config/constant.php";
                         </li>
                         <li>
                             <?php
-                            $status="closed";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                            $cstatus="Closed";
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                                 <a href="<?php echo $clos; ?>">Closed <span class="badge badge-success "><?php echo htmlentities($num1) ;?></span></a>
@@ -171,11 +162,6 @@ include "../config/constant.php";
                         </li>
                     </ul>
                 </li>
-                <li >
-                    <a href="<?php echo $mng_users; ?>" class="text-dark">
-                        <i class="fas fa-users"></i>
-                        <span class="bot-line"></span>Manage Users</a>
-                <li >
                 <li class="has-sub">
                     <a href="#\" class="text-dark js-arrow">
                         <i class="fas fa-cogs"></i>
@@ -188,7 +174,7 @@ include "../config/constant.php";
                 </li>
 
                 <li >
-                    <a href="<?php echo $admin_logout; ?>" class="text-dark">
+                    <a href="<?php echo $staff_logout; ?>" class="text-dark">
                         <i class="fas fa-power-off"></i>
                         <span class="bot-line"></span>Logout</a>
                 </li>

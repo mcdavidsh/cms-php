@@ -10,8 +10,8 @@ require_once '../config/constant.php';
 //    $_SESSION['time'] = time();//updating with latest timestamp
 
 
-if (strlen($_SESSION['login']) == 0) {
-    header('location: ../login.php');
+if (strlen($_SESSION['slogin']) == 0) {
+    header('location: login.php');
 } else {
 
 $hour      = date('H');
@@ -30,16 +30,15 @@ if ($hour > 17) {
 <html lang="en">
 
 <head>
-    <title>Cpanel | <?php echo $sitename; ?></title>
+    <title>Staff | <?php echo $sitename; ?></title>
     <?php
     include "../includes/panel/header.php";
     ?>
 </head>
 
-
     <body class="animsition">
     <div class="page-wrapper">
-        <?php include "../includes/panel/navmenu.php";?>
+        <?php include "../includes/staff/navmenu.php";?>
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7 py-5">
@@ -79,14 +78,14 @@ if ($hour > 17) {
         <section class="welcome p-t-10">
             <div class="container">
                 <div class="row">
-                    <?php $query=mysqli_query($con,"select fullName from users where userEmail='".$_SESSION['login']."'");
+                    <?php $query=mysqli_query($con,"select username from staff where username='".$_SESSION['slogin']."'");
                     while($row=mysqli_fetch_array($query))
                     {
                     ?>
                     <div class="col-md-12">
                         <h1 class="title-4"><?php echo $greetings ;?>,
 
-                            <span><?php echo ucwords($row['fullName']);?></span>
+                            <span><?php echo ucwords($row['username']);?></span>
                             <?php } ?>
                         </h1>
 <!--                        <hr class="line-seprate">-->
@@ -100,23 +99,44 @@ if ($hour > 17) {
         <section class="statistic">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
-                    <div class="col-lg-12 offset-md-2">
+                    <div class="col-lg-12 ">
                     <div class="row">
-
-                        <a href="<?php echo $new_comp;?>" class="col-md-4 col-lg-3 mbr-add-item">
-                            <div class="statistic__item">
-                                <h3 class="desc py-2">New Complain</h3>
-                                <i class="fa fa-plus fa-3x mbr-icon"></i>
-                            </div>
-                        </a>
                         <div class="col-md-6 col-lg-3 text-center">
                             <?php
-                            $status="In Process";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                            $cstatus="Closed";
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                             <div class="statistic__item">
-                                <h3 class="desc py-2"><?php echo $status;?></h3>
+                                <h3 class="desc py-2"><?php echo $cstatus;?></h3>
+                                <span class="fa-3x mbr-icon">
+<?php echo htmlentities($num1) ;?>
+                                </span>
+                            </div>
+                            <?php }?>
+                        </div>
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <?php
+                            $cstatus= null;
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and cstatus = '$cstatus'");
+                            $num1 = mysqli_num_rows($rt);
+                            {?>
+                            <div class="statistic__item">
+                                <h3 class="desc py-2"><?php echo "Not Processed";?></h3>
+                                <span class="fa-3x mbr-icon">
+<?php echo htmlentities($num1) ;?>
+                                </span>
+                            </div>
+                            <?php }?>
+                        </div>
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <?php
+                            $cstatus="In Process";
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints where astaff='".$_SESSION['id']."' and  cstatus='$cstatus'");
+                            $num1 = mysqli_num_rows($rt);
+                            {?>
+                            <div class="statistic__item">
+                                <h3 class="desc py-2"><?php echo $cstatus;?></h3>
                                 <span class="fa-3x mbr-icon">
 <?php echo htmlentities($num1) ;?>
                                 </span>
@@ -125,8 +145,8 @@ if ($hour > 17) {
                         <?php }?>
                         <div class="col-md-6 col-lg-3 text-center">
                             <?php
-                            $total_cp="Total Complaint";
-                            $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."'");
+                            $total_cp="Total Complaints";
+                            $rt = mysqli_query($con,"SELECT * FROM ascomplaints WHERE astaff='".$_SESSION['id']."'");
                             $num1 = mysqli_num_rows($rt);
                             {?>
                             <div class="statistic__item">

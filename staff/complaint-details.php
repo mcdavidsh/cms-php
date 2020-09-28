@@ -2,28 +2,14 @@
 error_reporting(E_ALL);
 require_once '../config/config.php';
 require_once '../config/constant.php';
-require_once '../config/PHPMailer.php';
-session_start();
 
-if (strlen($_SESSION['alogin']) == 0) {
+session_start();
+if (strlen($_SESSION['slogin']) == 0) {
     header('location:login.php');
 } else {
-
-if(isset($_POST["submit"])) {
-
-    $sender = $_POST['sender'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-    $receiver = $_POST['receiver'];
-
-    $sql = mysqli_query($con, "INSERT INTO stfcomplaints(sender,email,subject,message,maildate,receiver) VALUES
-('$sender','$email','$subject','$message','$yjdate','$receiver')");
-
-    $msgsuccess = '<div class="alert alert-success" role="alert">Message Sent Successfully. You will receive a reply shortly</div>';
-
+    date_default_timezone_set('Africa/Lagos');// change according timezone
+    $currentTime = date( 'd-m-Y h:i:s A', time () );
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,18 +36,29 @@ if(isset($_POST["submit"])) {
 <!--<body class="animsition">-->
 <body>
 <div class="page-wrapper">
-    <?php include "../includes/admin/navmenu.php"; ?>
+    <?php include "../includes/staff/navmenu.php";
+    ?>
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
 
+
         <!--         WELCOME-->
         <section class="welcome py-5">
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="title-4">Complaint
-                            <span>Details</span>
+
+
+                            <span>Details - <?php if($row['status']=="")
+                                { echo "Not Process Yet";
+                                } else {
+                                    echo ucwords($row['status']);
+                                }?> </span>
+
+
                         </h1>
                         <hr class="line-seprate">
                     </div>
@@ -71,110 +68,198 @@ if(isset($_POST["submit"])) {
         <!--         END WELCOME-->
         <!-- STATISTIC-->
 
-                <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-10 offset-md-1">
-                                <div class="card">
-                                    <?php $st='closed';
-                                    $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name,category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."'");
-                                    while($row=mysqli_fetch_array($query))
-                                    {
 
-                                    ?>
-                                    <div class="card-header">
-                                        <small class="float-right"><?php echo htmlentities($row['regDate']);?></small>
-                                        <div class="card-title">Complaint Name: <?php echo htmlentities($row['name']);?></div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6">
 
-                                                <div class="card-title" style="font-size: 18px; font-weight: 600;">Complaint No: <span class="card-text pl-2" style="font-weight: 500; font-size: 15px;"><?php echo htmlentities($row['complaintNumber']);?></span></div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="card-title"  style="font-size: 18px; font-weight: 600;">Category: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo ($row['catname']); ?></span></div>
-                                            </div>
-                                        </div>
-                                        <div class="row py-3">
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">File: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php $cfile=$row['complaintFile'];
-                                                        if($cfile=="" || $cfile=="NULL")
-                                                        {
-                                                            echo "File NA";
-                                                        }
-                                                        else{?>
-                                                            <a href="../_uploads/<?php echo htmlentities($row['complaintFile']);?>" target="_blank"/> View File</a>
-                                                        <?php } ?></span></div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Final Status: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php if($row['status']=="")
-                                                        { echo "Not Process Yet";
-                                                        } else {
-                                                            echo htmlentities($row['status']);
-                                                        }?></span></div>
-                                            </div>
+        <div class="container">
+            <div class="module">
+                <!--                        <div class="module-head">-->
+                <!--                            <h3>Complaint Details</h3>-->
+                <!--                        </div>-->
+                <div class="module-body table">
+                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-2 table table-bordered table-striped	 display" width="100%">
 
-                                        </div>
-                                        <div class="row py-3">
-                                            <?php $ret=mysqli_query($con,"select complaintremark.remark as remark,complaintremark.status as sstatus,complaintremark.remarkDate as rdate from complaintremark join tblcomplaints on tblcomplaints.complaintNumber=complaintremark.complaintNumber where complaintremark.complaintNumber='".$_GET['cid']."'");
-                                            while($rw=mysqli_fetch_array($ret))
-                                            {?>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Remarks: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['remark']); ?>
-                                                    </span></div></div>
-                                            <div class="col-md-6 col-lg-6">
-                                                <div class=" card-title"  style="font-size: 18px; font-weight: 600;">Remark Date: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['rdate']); ?>
-                                                    </span></div></div>
-                                        </div>
+                        <?php $st='Assigned';
+                        $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name,users.contactNo as contact, users.address as address, category.categoryName as catname from tblcomplaints join users on users.id=tblcomplaints.userId join category on category.id=tblcomplaints.category where tblcomplaints.complaintNumber='".$_GET['cid']."' and tblcomplaints.astatus='$st'");
+                        while($row=mysqli_fetch_array($query))
+                        {   ?>
+                        <thead>
+                        <tr>
+                            <th colspan="2">
+                                <b>Complaint Number</b>:
+                                <?php
+                                echo htmlentities($row['complaintNumber']);?>
+                            </th>
+                            <th colspan="3">
 
-                                    </di>
-                                        <div class="row py-3">
-                                            <div class="col-md-4 col-lg-6">
-                                                <div class="card-title"  style="font-size: 18px; font-weight: 600;">Status: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;"><?php echo  htmlentities($rw['sstatus']); ?>
-                                                    </span>
-                                                </div>
+                                <b>Title</b>:
+                                <?php echo htmlentities($row['noc']);?>
+                            </th>
 
-                                            </div>
-                                            <?php }?>
-                                        </div>
-                                    <div class="row py-3">
-                                        <div class="col-md-4 col-lg-6">
-                                            <div class="col card-title"  style="font-size: 18px; font-weight: 600;">Complain Deatils: <span class="card-text pl-2" style="font-weight: lighter; font-size: 14px;">
- <?php echo htmlentities($row['complaintDetails']);?>
-                                                    </span>
-                                            </div>
+                            <th colspan="3" class="small">
+                                <b>Reg Date</b>:
+                                <?php echo htmlentities($row['regDate']);?>
+                            </th>
+                            <th colspan="3" class="small">
+                                <?php $ste = mysqli_query ($con, "select * from ascomplaints where acomplaintNumber ='".$_GET['cid']."'");
+                                while($dae=mysqli_fetch_array($ste))
+                                {
+                                ?>
+                                <b>Assign Date</b>:
+                                <?php echo htmlentities($dae['assignDate']);?>
+                               
+                            </th>
+                            
+                        </tr>
+                        </thead>
+                        <hr>
+                        <tbody>
 
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="row ml-2">
-                                            <div class="card-title px-4"><h5>Action:</h5></div>
 
-                                            <div class="btn-group-sm btn-block">
-                                                <?php if($row['status']=="closed"){
 
-                                                } else {?>                                              <a href="javascript:void(0);" onClick="popUpWindow('update-complaint.php?cid=<?php echo $row['complaintNumber'];?>');" title="Update order">
-                                                        <button type="button" class="btn btn-primary">Update</button></a><?php } ?>
+                        <tr>
+                            <td><b>User Fullname</b></td>
+                            <td><?php echo htmlentities($row['name']);?></td>
+                            <td><b>User Phone</b></td>
+                            <td> <?php echo htmlentities($row['contact']);?></td>
+                            <td><b>User Address</b></td>
+                            <td><?php echo htmlentities($row['address']);?>
+                            </td>
+                        </tr>
 
-                                                    <button type="submit" name="submit" class="btn btn-primary">Forward</button>
 
-                                            </div>
 
-                                        </div>
-                                        <?php }?>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+                        <tr>
+                            <td><b>Date of Occurrence</b></td>
+                            <td><?php echo htmlentities($row['dateoc']);?></td>
+                            <td><b>Department </b></td>
+                            <td><?php echo ucwords($row['catname']);?></td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td><b>Name of Organization</b></td>
+                            <td><?php echo ucwords($row['nameorg']);?></td>
+                            <td><b>Address of Organization</b></td>
+                            <td><?php echo ucwords($row['addorg']);?></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Complaint Details </b></td>
+
+                            <td colspan="5"> <?php echo htmlentities($row['complaintDetails']);?></td>
+
+                        </tr>
+
+                        </tr>
+                        <tr>
+                            <td><b>File(if any) </b></td>
+
+                            <td colspan="5"> <?php $cfile=$row['complaintFile'];
+                                if($cfile=="" || $cfile=="NULL")
+                                {
+                                    echo "File NA";
+                                }
+                                else{?>
+                                    <a type="button" class="btn btn-primary text-white btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                        View File
+                                    </a>
+                                <?php } ?></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><b>Final Status</b></td>
+
+                            <td><?php  if($row['status']=="")
+                                { echo "Not Process Yet";
+                                } else {
+                                    echo htmlentities($row['status']);
+                                }?>
+
+                            </td>
+
+                            <td><b>Priority</b></td>
+                            <td><?php
+                                // $high = '';
+
+                                // $medium ='<div class="badge badge-warning">Medium</div>';
+
+                                // $low ='<div class="badge badge-info">Low</div>';
+                                if($row['priority']=="High"){
+
+                                    echo'<div class="badge badge-danger">High</div>';
+                                }
+
+                                elseif ($row['priority']=="Medium")
+                                {
+                                    echo '<div class="badge badge-warning">Medium</div>';
+                                }
+                                else
+                                {
+                                    echo '<div class="badge badge-info">Low</div>';
+                                }
+
+                                ?></td>
+                        </tr>
+
+
+                        <?php $ret=mysqli_query($con,"select complaintremark.remark as remark,complaintremark.status as sstatus,complaintremark.remarkDate as rdate from complaintremark join tblcomplaints on tblcomplaints.complaintNumber=complaintremark.complaintNumber where complaintremark.complaintNumber='".$_GET['cid']."'");
+
+                        while($rw=mysqli_fetch_array($ret))
+                        {
+
+                        ?>
+
+                        <tr>
+                            <td><b>Remark</b></td>
+                            <td colspan="5"><?php echo  htmlentities($rw['remark']); ?> <b>Remark Date :</b><?php echo  htmlentities($rw['rdate']); ?></td>
+                            <?php }?>
+                            <td><?php echo htmlentities($dae['aremark'])?></td>
+                        </tr>
+
+
+
+                        <?php if($row['status']=="closed" ){
+
+                        } else {?>
+                            <tr>
+                            <td><b>Action</b></td>
+
+                            <td>
+
+                                <a href="javascript:void(0);" onClick="popUpWindow('update-complaint.php?cid=<?php echo htmlentities($row['complaintNumber']);?>');" title="Update order">
+                                    <button type="button" class="btn btn-primary">Take Action</button></td>
+                            </a></td>
+                    
+                                </tr>
+            
+                        <?php } ?>
+
+                    </table>
                 </div>
+            </div>
+        </div>
 
 
-        <!--        New Responsive Table-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content bg-transparent">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="modal-body">
+                        <img src="../_uploads/<?php echo $row['complaintFile'];?>" class="img-thumbnail rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <?php include "../includes/panel/footer.php"; ?>
 
 
+        <?php } ?>
         <?php } ?>

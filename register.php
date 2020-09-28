@@ -2,15 +2,30 @@
 include "config/constant.php";
 include "config/config.php";
 error_reporting(E_ALL);
-if(isset($_POST['submit']))
-{
-    $fullname=$_POST['fullname'];
-    $email=$_POST['email'];
-    $password=md5($_POST['password']);
-    $contactno=$_POST['contactno'];
-    $status=1;
-    $query=mysqli_query($con,"insert into users(fullName,userEmail,password,contactNo,status) values('$fullname','$email','$password','$contactno','$status')");
-    $msg='<div class="alert alert-success" role="alert">Registration Successful! <a href="'.$user_login.'" class="text-white font-weight-bold">Login</a> to get started.</div>';
+
+$contactno = "";
+$email = "";
+if(isset($_POST['submit'])) {
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $address = $_POST['address'];
+    $contactno = $_POST['contactno'];
+    $status = 1;
+//    Check Duplicate User
+    $sql_u = "SELECT * FROM users WHERE contactNo ='$contactno'";
+    $sql_e = "SELECT * FROM users WHERE userEmail ='$email'";
+    $res_u = mysqli_query($con, $sql_u);
+    $res_e = mysqli_query($con, $sql_e);
+    if (mysqli_num_rows($res_u) > 0) {
+        $msg = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close">x</button>Email ' . $email . ' Already Exists, Try Again.</div>';
+    } else if (mysqli_num_rows($res_e) > 0) {
+        $msg = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close">x</button>Phone No. ' . $contactno . ' Already Exists, Try Again. </div>';
+    } else {
+
+        $query = mysqli_query($con, "insert into users(fullName,userEmail,password,contactNo,address,status) values('$fullname','$email','$password','$contactno','$address','$status')");
+        $msg = '<div class="alert alert-success" role="alert">Registration Successful! <a href="' . $user_login . '" class="text-white font-weight-bold">Login</a> to get started.</div>';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -43,17 +58,20 @@ if(isset($_POST['submit']))
     <div class="container">
         <div class="row justify-content-center py-5">
             <div class="media-container-column col-lg-6 col-md-8 offset-sm" data-form-type="formoid">
-                <div data-form-alert="" hidden="">Check your email for instructions!</div>
 
                 <div  class="form1" data-form-type="formoid" style="background: #ffffff; ">
+                    
+                    <?php if(isset($msg)) {
 
-                    <?php if(isset($msg)){
-                        echo ($msg);
-                    }?>
+                        echo $msg;
+                       $msg = "";
+                    }
+;
+                ?>
                     <!-- Default form login -->
                     <form  method="post" class="text-center border border-light p-5">
 
-                        <p class="h4 mb-4">Signup</p>
+                        <p class="h4 mb-4">Registration Form</p>
 <!--                    Name    -->
 
                         <input type="text" name="fullname" id="defaultLoginFormName" class="form-control mb-4" placeholder="Fullname">
@@ -61,6 +79,7 @@ if(isset($_POST['submit']))
                         <!-- Email -->
                         <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
                         <input type="text" name="contactno" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Phone No." maxlength="11">
+                        <input type="text" name="address" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Home Address">
                         <!-- Password -->
                         <input type="password" name="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 <!--                        Confirm Password-->
@@ -77,7 +96,7 @@ if(isset($_POST['submit']))
                         </div>
 
                         <!-- Sign in button -->
-                        <span class="input-group-btn"><button  type="submit" name="submit" class="btn btn-primary btn-form display-4" style="border-radius:50px;">Login</button></span>
+                        <span class="input-group-btn"><button  type="submit" name="submit" class="btn btn-primary btn-form display-4" style="border-radius:50px;">Register</button></span>
 
                         <!-- Register -->
                         <p class="py-2">

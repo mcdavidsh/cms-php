@@ -11,16 +11,26 @@ else{
     date_default_timezone_set('Africa/Lagos');// change according timezone
     $currentTime = date( 'd-m-Y h:i:s A', time () );
 
+
+
 if(isset($_POST['submit']))
 {
     $category=$_POST['category'];
     $description=$_POST['description'];
     $id=intval($_GET['id']);
     $sql=mysqli_query($con,"update category set categoryName='$category',categoryDescription='$description' where id='$id'");
+//    UPDATE T1, T2,
+//[INNER JOIN | LEFT JOIN] T1 ON T1.C1 = T2. C1
+//SET T1.C2 = T2.C2,
+//    T2.C3 = expr
+//WHERE condition
+//    $sql= mysqli_query($con, "UPDATE category, staff JOIN category ON category.categoryName, category.categoryDescription = staff.department SET category.categoryName=staff.department where id='$id' ");
     $_SESSION['msg']='<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert">×</button>Category Updated</div>';
 
 }
-
+else{
+    echo '<script></script>';
+}
 
     ?>
     <!DOCTYPE html>

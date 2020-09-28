@@ -140,25 +140,8 @@ if(isset($_GET['uid']) && $_GET['action']=='del')
                                         <a href="manage-users.php?uid=<?php echo htmlentities($row['id']);?>&&action=del" title="Delete" onClick="return confirm('Do you really want to delete ?')">
                                             <button type="button" class="btn btn-danger btn-sm">Delete</button></a>
                                     </td>
-                                    <!--                                    <tr class="spacer"></tr>-->
-                                    <?php } ?>
-
-
-                                </tbody>
-                                <!--                                <tfoot>-->
-                                <!--                                <tr>-->
-                                <!--                                    <th>Name</th>-->
-                                <!--                                    <th>Position</th>-->
-                                <!--                                    <th>Office</th>-->
-                                <!--                                    <th>Age</th>-->
-                                <!--                                    <th>Start date</th>-->
-                                <!--                                    <th>Salary</th>-->
-                                <!--                                </tr>-->
-                                <!--                                </tfoot>-->
-                            </table>
-
-
                             </tbody>
+                            <?php $cnt=$cnt+1; } ?>
                             </table>
                         </div>
                     </div>

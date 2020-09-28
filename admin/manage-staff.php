@@ -162,7 +162,7 @@ Staff Registration
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="title-5 m-b-35">User List</h3>
+                    <h3 class="title-5 m-b-35">Staff List</h3>
 
                     <div class="table table-responsive table-responsive-data2">
                         <table id="example" class="table nowrap table-data2" style="width:100%">

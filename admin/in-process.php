@@ -59,7 +59,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                             <div class="col-md-6 col-lg-3 offset-1 text-center">
                                 <?php
                                 $status="In Process";
-                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where userId='".$_SESSION['id']."' and  status='$status'");
+                                $rt = mysqli_query($con,"SELECT * FROM tblcomplaints where astaff='".$_SESSION['alogin']."' and  status='$status'");
                                 $num1 = mysqli_num_rows($rt);
                                 {?>
                                     <div class="statistic__item">
@@ -110,6 +110,9 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                 $query=mysqli_query($con,"select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.status='$st'");
                                 while($row=mysqli_fetch_array($query))
                                 {
+                                if ($row['astatus'] == "Assigned") {
+                                } else {
+                                    ?>
                                     ?>
                                     <tr class="tr-shadow">
                                         <td><?php echo htmlentities($row['complaintNumber']);?></td>
@@ -122,7 +125,7 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
                                         <td>   <a class="btn btn-primary btn-sm" href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> View Details</a>
                                         </td>
                                     </tr>
-
+                                <?php }?>
                                 <?php  } ?>
                                 <!--                                    <tr class="spacer"></tr>-->
 
