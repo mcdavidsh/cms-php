@@ -8,7 +8,480 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="136a3b21-e5c7-4188-89d7-a7963bc4fa26" name="Default Changelist" comment="Commercial Release" />
+    <list default="true" id="136a3b21-e5c7-4188-89d7-a7963bc4fa26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.modules.xml.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/issue.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules_BACKUP_374.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules_BASE_374.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules_LOCAL_374.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules_REMOTE_374.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assign-case.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assigned-complaint.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/change-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/closed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/complaint-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit-category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/in-process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-staff.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/manage-users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/new.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/not-processed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/report-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/reports.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update-complaint.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view-mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/old/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/old/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/old/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/old/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dropdown/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dropdown/js/script.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/abigail-keenan-17651-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/alex-block-300193-unsplash-736x1164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/alexander-dummer-261098-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/alice-donovan-rouse-194653-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/amritanshu-sikdar-253730-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/andrea-cau-51160-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/bill-wegener-286910-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/blog/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/blog/img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/blog/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/caleb-woods-275754-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cameron-kirby-92969-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/chuttersnap-262938-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/customer-service.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/customer-service.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elisha-terada-249885-2000x1333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/hashes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/jason-blackeye-137278-2000x1333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/jeffrey-wegrzyn-174135-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/jesse-schoff-253559-unsplash-1460x973.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/josh-calabrese-179700-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/joshua-earle-63441-unsplash-2000x1333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/kayla-velasquez-199343-2000x1125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/keith-johnston-216356-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo/favicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo/pcc-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/malte-wingen-381987-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/malte-wingen-381991-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/mbr-favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/nathan-dumlao-299032-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/pcc-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/priscilla-du-preez-341138-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/quino-al-223138-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/riley-mccullough-196374-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/samuel-zeller-30465-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/thomas-kelley-82289-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/tobias-keller-104263-1200x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/vlad-tchompalov-219130-1280x662.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mobirise/css/mbr-additional-1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mobirise/css/mbr-additional-2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mobirise/css/mbr-additional-3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mobirise/css/mbr-additional.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mobirise/css/mbr-custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/css/font-face.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-100italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-200italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-600italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-900italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/bg-title-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/bg-title-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/Untitled-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/avatar-big-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/logo-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/logo-mini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/images/icon/u-avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/dataTables.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/datatables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/datatables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/dataTables.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/datatables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/datatables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/DataTables/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/animsition/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/animsition/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/bootstrap-4.1/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/bootstrap-4.1/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/bootstrap-4.1/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/chartjs/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/circle-progress/circle-progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/circle-progress/circle-progress.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/countdown/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/countdown/jquery.countdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/countdown/moment-timezone-with-data.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/countdown/moment-timezone.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/countdown/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/counter-up/jquery.counterup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/counter-up/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/counter-up/waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/css/datatable.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/css/datatables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/css/fixedHeader.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/css/responsive.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/dataTables.fixedHeader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/dataTables.responsive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/datatables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/datatable-old/js/responsive.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/brands.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/svg-with-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/svg-with-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/v4-shims.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/fonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5.1/old/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/font-awesome-5/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox-plus-jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox-plus-jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/dist/js/lightbox.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/lightbox2/src/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/perfect-scrollbar/perfect-scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/progressbar/progressbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/progressbar/progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/smk-accordion/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/smk-accordion/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/smk-accordion/accordion.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert/sweetalert.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/css/sweetalert2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/css/sweetalert2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/js/sweetalert2.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/js/sweetalert2.all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/js/sweetalert2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/js/sweetalert2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/sweetalert2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/sweetalert2/dist/sweetalert2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/toastr/css/toastr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/toastr/css/toastr.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/toastr/js/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.brazil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.europe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.france.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.germany.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.russia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.sampledata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.usa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jquery.vmap.world.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/vector-map/jqvmap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/wow/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel/vendor/wow/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/parallax/jarallax.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/popper/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/smoothscroll/smooth-scroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/socicon/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/socicon/fonts/socicon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/socicon/fonts/socicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/socicon/fonts/socicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/socicon/fonts/socicon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tether/tether.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tether/tether.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/theme/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/theme/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/touch-swipe/jquery.touch-swipe.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons/mobirise-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons/mobirise-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons/mobirise-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons/mobirise-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons/mobirise-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons2/mobirise2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons2/mobirise2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons2/mobirise2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons2/mobirise2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/web/assets/mobirise-icons2/mobirise2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/PHPMailer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/constant.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/complaint-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/new.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpanel/status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/admin/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/admin/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/admin/navmenu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/navmenu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/panel/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/panel/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/panel/navmenu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/staff/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/staff/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/staff/navmenu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/cp-3.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/change-password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/closed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/complaint-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/edit-category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/in-process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/not-processed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/report-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/reports.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/staff-home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff/update-complaint.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +494,7 @@
     <option name="printScope" value="4" />
     <option name="PRINT_LINE_NUMBERS" value="true" />
     <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../issue\exportToHTML" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../cms\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,102 +508,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="09f14dcc-5070-4279-ae0f-2997ecbbd2be" name="localhost" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1hW0uWBoR6Bzy3DOUYl87dZsh2K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/staff" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projects\active\issue\assets\panel\vendor\datatable\css" />
-      <recent name="C:\xampp\htdocs\projects\active\issue" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\includes\panel" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projects\active\issue\staff" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\cpanel" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\admin" />
-      <recent name="C:\xampp\htdocs\projects\active\issue\includes" />
-      <recent name="C:\xampp\htdocs\projects\active\issue" />
+      <recent name="C:\xampp\htdocs\projects\active\cms-release" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\active\cms-release\framework\library\includes" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="issue" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="issue" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost" start_url="/projects/active/issue">
+    <configuration name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="localhost" start_url="/projects/active/cms">
       <method v="2" />
     </configuration>
   </component>
@@ -159,6 +580,11 @@
       <workItem from="1600827225340" duration="224000" />
       <workItem from="1601129924241" duration="28944000" />
       <workItem from="1601175552632" duration="50489000" />
+      <workItem from="1611969075725" duration="699000" />
+      <workItem from="1611970661149" duration="16482000" />
+      <workItem from="1612025128810" duration="18000" />
+      <workItem from="1612025389046" duration="246000" />
+      <workItem from="1612025648834" duration="18350000" />
     </task>
     <servers />
   </component>
@@ -168,11 +594,6 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="1">
-          <value>
-            <State />
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -182,48 +603,29 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="359" y="0" key="#PHP" timestamp="1600307575566">
+    <state x="393" y="193" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1612014762872">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="359" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1600307575566" />
-    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600307589629">
+    <state x="393" y="193" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1612014762872" />
+    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1612003496286">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600307589629" />
-    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601269347530">
+    <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612003496286" />
+    <state x="347" y="17" width="585" height="646" key="find.popup" timestamp="1612015999769">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1601269347530" />
-    <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600739207627">
+    <state x="347" y="17" width="585" height="646" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1612015999769" />
+    <state x="22" y="0" key="new project wizard" timestamp="1612043688892">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="393" y="205" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1600739207627" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601164164196">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601164164196" />
-    <state x="474" y="259" key="NewPhpFileDialog" timestamp="1601285067677">
+    <state x="22" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1612043688892" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612015329563">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="474" y="259" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1601285067677" />
-    <state x="506" y="277" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1601249117031" />
-    <state x="141" y="0" key="SettingsEditor" timestamp="1600827371878">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600827371878" />
-    <state x="347" y="28" width="585" height="624" key="find.popup" timestamp="1600722723965">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="347" y="28" width="585" height="624" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600722723965" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1601287485746">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1601287485746" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601289479954">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601289479954" />
-    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601249630244" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612015329563" />
   </component>
 </project>

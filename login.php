@@ -1,15 +1,17 @@
 <?php
-require_once "config/constant.php";
-require_once "config/config.php";
+require_once "framework/library/config/constant.php";
+require_once "framework/library/config/config.php";
+require_once "framework/library/includes/accounts.php";
 session_start();
 error_reporting(0);
 if(isset($_POST['submit']))
 {
     $ret=mysqli_query($con,"SELECT * FROM users WHERE userEmail='".$_POST['username']."' and password='".md5($_POST['password'])."'");
+    var_dump($ret);
     $num=mysqli_fetch_array($ret);
     if($num>0)
     {
-        $extra="cpanel";//
+        $extra="app/cpanel";//
         $_SESSION['login']=$_POST['username'];
         $_SESSION['id']=$num['id'];
         $host=$_SERVER['HTTP_HOST'];
@@ -58,7 +60,7 @@ if(isset($_POST['change']))
 <html>
 <head>
     <title><?php echo $pageTitle; ?> </title>
-<?php include "includes/header.php";?>
+<?php include "framework/library/includes/header.php";?>
     <script type="text/javascript">
         function valid()
         {
@@ -71,22 +73,13 @@ if(isset($_POST['change']))
             return true;
         }
     </script>
+    <script data-ad-client="ca-pub-7432919353877864" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 
 <body class="animsition">
 
-<?php include "includes/navmenu.php";?>
-<!--	<div class="jumbotron jumbotron-fluid jb-wrap d-none d-sm-block">-->
-<!--  <div class="jumbotron jb-item">-->
-<!--    <p class="jb-title">LOGIN</p>-->
-<!--  </div>-->
-<!--		<div class="breadcrumb mbr-breadcrumb"> <a href="index.html" class="breadcrumb-item mbr-breadcrumb-item active ">Home</a>-->
-<!--			<a href="login.php" class="breadcrumb-item mbr-breadcrumb-item mbr-active">Login</a>-->
-<!--	  </div>-->
-<!--</div>-->
-
-<!--	Login Form-->
+<?php include "framework/library/includes/navmenu.php";?>
     <section class="mbr-section form1 cid-qv7s7YQkMT" style="background: #f6f6f6;" id="form1-73" data-rv-view="2688">
 
 
@@ -105,7 +98,7 @@ if(isset($_POST['change']))
                                 echo ($msg);
                             }?>
                         <!-- Default form login -->
-                        <form class="text-center border border-light p-5" method="post" name="frmLogin" id="frmLogin">
+             <form class="text-center border border-light p-5" method="post" name="frmLogin" id="frmLogin">
 
                             <p class="h4 mb-4">Login</p>
 
@@ -132,15 +125,15 @@ if(isset($_POST['change']))
 
                             <!-- Sign in button -->
                             <span class="input-group-btn py-3"><button  type="submit"  name="submit" class="btn btn-primary btn-form display-4" style="border-radius:50px;">Login</button></span>
-
+<?php echo $user_a; ?>
                             <!-- Register -->
-                            <p>
+                            <p class="py-3">
                                 Don't Have an Account Yet?
                                 <a href="register.php">Signup</a>
                             </p>
 
                         </form>
-                        <!-- Default form login -->
+
                     </div>
 
                     <div class="form1" data-form-type="formoid">
@@ -149,33 +142,5 @@ if(isset($_POST['change']))
             </div>
         </div>
     </section>
-	<!--	Footer -->
-<section class="cid-r6Vq2EonjM" id="footer4-f">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text1 col-lg-6">
-        <p class="mbr-text mbr-bold links mbr-fonts-style align-left display-7"> IMS 2020 &copy; All Rights Reserved </p>
-      </div>
-<!--
-      <div class="col-md-12 copyright align-right text2 col-lg-6">
-        <p class="mbr-text mbr-bold mbr-fonts-style display-5"> Premium Bootstrap Templates </p>
-      </div>
--->
-      <div class="col-lg-4 col-md-12"> </div>
-    </div>
-  </div>
-</section>
-	 <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
-  <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/jarallax/jarallax.min.js"></script>
-  <script src="assets/jquery-mb-ytplayer/jquery.mb.ytplayer.min.js"></script>
-  <script src="assets/jquery-mb-vimeo_player/jquery.mb.vimeo_player.js"></script>
-  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
-</body>
+<?php include "framework/library/includes/footer.php"; ?>
 </html>

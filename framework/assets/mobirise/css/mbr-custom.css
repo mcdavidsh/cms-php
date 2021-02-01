@@ -1,0 +1,187 @@
+/*Breadcrumb*/ 
+
+.jumbotron .jumbotron-fluid .jb-wrap { 
+	padding: 10px 0 10px 0;
+	line-height: 20px;
+	display: flex;
+	flex-flow: wrap column;
+	justify-content: space-around;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(195, 195, 195);
+}
+
+.jb-item {
+	padding-bottom: 20px;
+	margin: 0;
+	
+}
+.mbr-add-item {
+	padding: 0;
+	text-align: center;
+
+
+}
+.mbr-add-item i {
+	position: relative;
+	top: 10px;
+	margin-bottom: auto;
+	margin-top: auto;
+	/*font-weight: 400;*/
+	/*padding: 20px 0 0 0;*/
+}
+.text-mbr {
+	z-index: 1;
+}
+
+
+
+.jb-title {
+	font-size: 32px;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+.mbr-breadcrumb {
+	
+	
+	padding-left: 10px;
+	margin: 0;
+	font-size: 14px;
+	
+} 
+
+.mbr-active {
+ color: #a61a3d;
+}
+
+.mbr-font {
+	border:  1px solid #a61a3d;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 80px;
+}
+.mbr-font-no {
+	font-weight: 600;
+	font-size: 56px;
+	color: #a61a3d;
+	font-style: normal;
+}
+
+a.mbr-add-item {
+	color: #a61a3d;
+}
+
+.alert .mbri-alert1 {
+
+	color: #FFFFFF;
+	background:#a61a3d ;
+}
+
+.ims-logo {
+	height: 60px;
+	width: auto;
+}
+.ims-logo2
+
+{
+	height: 40px;
+	width: auto;
+}
+
+/*Lightbox*/
+
+#lightbox .modal-content {
+	display: inline-block;
+	text-align: center;
+}
+
+#lightbox .close {
+	opacity: 1;
+	color: rgb(255, 255, 255);
+	background-color: rgb(25, 25, 25);
+	padding: 5px 8px;
+	border-radius: 30px;
+	border: 2px solid rgb(255, 255, 255);
+	position: absolute;
+	top: -15px;
+	right: -55px;
+
+	z-index:1032;
+}
+/* bar on bottom  */
+
+/* Styling the bar itself */
+#topbar {
+    position:fixed;
+    bottom: -60px;
+    display: block;
+    z-index: 99999;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background:hsla(205,85%,40%,.9);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+/* Displaying the bar when the checkbox is checked */
+#toggleTop:checked + #topbar {
+    transition: bottom 1s;
+    bottom:0;
+
+}
+
+.cms-notify-btn {
+	/*background: #ffffff;*/
+}
+
+.cms-notify-btn a {
+	color: grey;
+}
+
+ul.active > a {
+	color: #a61a3d;
+}
+
+.cid-qvgUjfbLH0 .counter-container .cms-ft-child>li:before {
+  position: absolute;
+  left: 0;
+  padding-top: 3px;
+  display: inline-block;
+  text-align: center;
+  margin: 5px 10px;
+  line-height: 20px;
+  transition: all .2s;
+  color: #ffffff;
+  background:  #a61a3d;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  content: '✓';
+}
+
+
+.cid-r7p5hudegl .cms-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    color: white!important;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;}
+.cid-r7p5hudegl .card .card-header a.panel-title:hover {
+    opacity: 0.5;
+}

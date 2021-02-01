@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config/config.php");
+include("framework/library/config/config.php");
 $_SESSION['login']=="";
 date_default_timezone_set('Africa/Lagos');
 $ldate=date( 'd-m-Y h:i:s A', time () );

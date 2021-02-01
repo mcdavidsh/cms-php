@@ -1,6 +1,6 @@
 <?php
-include "config/constant.php";
-include "config/config.php";
+include "framework/library/config/constant.php";
+include "framework/library/config/config.php";
 error_reporting(E_ALL);
 
 $contactno = "";
@@ -32,25 +32,15 @@ if(isset($_POST['submit'])) {
 <html >
 <head>
     <title><?php echo $pageTitle; ?> </title>
-    <?php include "includes/header.php";?>
-
+    <?php include "framework/library/includes/header.php";?>
+<script data-ad-client="ca-pub-7432919353877864" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 
 <body class="animsition">
 
-<?php include "includes/navmenu.php";?>
+<?php include "framework/library/includes/navmenu.php";?>
 
-<!--	<div class="jumbotron jumbotron-fluid jb-wrap d-none d-sm-block">-->
-<!--  <div class="jumbotron jb-item">-->
-<!--    <p class="jb-title">LOGIN</p>-->
-<!--  </div>-->
-<!--		<div class="breadcrumb mbr-breadcrumb"> <a href="index.php" class="breadcrumb-item mbr-breadcrumb-item active ">Home</a>-->
-<!--			<a href="login.php" class="breadcrumb-item mbr-breadcrumb-item mbr-active">Login</a>-->
-<!--	  </div>-->
-<!--</div>-->
-
-<!--	Login Form-->
 <section class="mbr-section form1 cid-qv7s7YQkMT" style="background: #f6f6f6;" id="form1-73" data-rv-view="2688">
 
 
@@ -115,4 +105,4 @@ if(isset($_POST['submit'])) {
     </div>
 </section>
 
-<?php include "includes/footer.php";?>
+<?php include "framework/library/includes/footer.php";?>
