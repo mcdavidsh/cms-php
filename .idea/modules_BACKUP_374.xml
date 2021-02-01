@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/cms-release.iml" filepath="$PROJECT_DIR$/.idea/cms-release.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/issue.iml" filepath="$PROJECT_DIR$/.idea/issue.iml" />
+>>>>>>> c41e69a9fe529ea7c05791c446d4b74dda9bd064
+    </modules>
+  </component>
+</project>
